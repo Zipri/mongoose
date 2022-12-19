@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
 const seriesSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: true,
-        unique: [true, "this ID is already exist"]
-    },
     title: {
         type: String,
         required: true,

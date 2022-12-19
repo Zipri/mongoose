@@ -22,4 +22,88 @@ router.post('/series', async (request, response) => {
     }
 })
 
+router.get('/series', async (request, response) => {
+    try {
+        const result = await series.find()
+        if (!result) {
+            response.json({
+                status: "Failed",
+                message: "Not found records"
+            })
+        } else {
+            response.json({
+                status: "Success",
+                message: "Records found",
+                data: result
+            })
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+router.get('/series/:id', async (request, response) => {
+    try {
+        const _id = request.params.id
+        const result = await series.findById(_id)
+        if (!result) {
+            response.json({
+                status: "Failed",
+                message: "Not found record by this id"
+            })
+        } else {
+            response.json({
+                status: "Success",
+                message: "Records found",
+                data: result
+            })
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+router.put('/series/:id', async (request, response) => {
+    try {
+        const _id = request.params.id
+        const body = request.body
+        const result = await series.findByIdAndUpdate(_id, body, {new: true})
+        if (!result) {
+            response.json({
+                status: "Failed",
+                message: "update - X"
+            })
+        } else {
+            response.json({
+                status: "Success",
+                message: "update - V",
+                data: result
+            })
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+router.delete('/series/:id', async (request, response) => {
+    try {
+        const _id = request.params.id
+        const result = await series.findByIdAndDelete(_id)
+        if (!result) {
+            response.json({
+                status: "Failed",
+                message: "delete - X"
+            })
+        } else {
+            response.json({
+                status: "Success",
+                message: "delete - V",
+                data: result
+            })
+        }
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 module.exports = router;
