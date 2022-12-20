@@ -106,4 +106,27 @@ router.delete('/series/:id', async (request, response) => {
     }
 })
 
+// get single record by NAME
+router.get("/series/title/:title", async (req, res) => {
+    try {
+        const title = req.params.title
+        const result = await series.findOne({title: title})
+        if (!result) {
+            res.json({
+                status: "FAILED",
+                message: "Record not found on this Name"
+            })
+        } else {
+            res.json({
+                status: "SUCCESS",
+                message: "Record founded by Name",
+                data: result
+            })
+        }
+    }
+    catch (e) {
+        console.log(e)
+    }
+})
+
 module.exports = router;
