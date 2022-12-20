@@ -55,6 +55,10 @@ const Find = () => {
       Cover
       <label> {Data.cover}</label>
     </div>
+    <div>
+      Seasons
+      <label> {Data.seasons}</label>
+    </div>
   </div>
 };
 

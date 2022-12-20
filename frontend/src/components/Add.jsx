@@ -5,13 +5,14 @@ import axios from "axios";
 const Add = () => {
   const [title, setTitle] = useState("")
   const [premiere, setPremiere] = useState("")
-  const [rating, setRating] = useState(50)
+  const [rating, setRating] = useState(1)
   const [trailer, setTrailer] = useState("")
-  const [cover, setCover] = useState("123")
+  const [cover, setCover] = useState("")
+  const [seasons, setSeasons] = useState("")
 
   const addToDb = () => {
     const url = 'http://localhost:8000/series/'
-    const Credentials = {title, premiere, rating, trailer, cover}
+    const Credentials = {title, premiere, rating, trailer, cover, seasons}
     console.log(Credentials)
     axios.post(url, Credentials)
       .then(response => {
@@ -49,6 +50,10 @@ const Add = () => {
     <div>
       Cover
       <input onChange={(e) => setCover(e.target.value)}/>
+    </div>
+    <div>
+      Seasons
+      <input onChange={(e) => setSeasons(e.target.value)}/>
     </div>
     <div>
       <button onClick={()=>{

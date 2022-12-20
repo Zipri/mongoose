@@ -24,6 +24,10 @@ const seriesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    seasons: {
+        type: String,
+        required: true
+    },
 });
 
 const series = new mongoose.model('series', seriesSchema);

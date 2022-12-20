@@ -16,8 +16,7 @@ const SeriesItem = ({item}) => {
       }
     }).catch(err => {
       console.log(err)
-    })
-      // .finally(() => window.location.reload())
+    }).finally(() => window.location.reload())
   }
   return <li className={s.series_item}>
     <div className={s.flex}>
@@ -27,6 +26,7 @@ const SeriesItem = ({item}) => {
         <div>Rating</div>
         <div>Trailer</div>
         <div>Cover</div>
+        <div>Seasons</div>
       </div>
       <div className={s.series_item_info}>
         <h1>{item.title}</h1>
@@ -34,6 +34,7 @@ const SeriesItem = ({item}) => {
         <h2>{item.rating}</h2>
         <h2>{item.trailer}</h2>
         <h2>{item.cover}</h2>
+        <h2>{item.seasons}</h2>
       </div>
       <div className={s.flex_column}>
         <button onClick={deleteSeries}
