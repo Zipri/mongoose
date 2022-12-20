@@ -31,33 +31,41 @@ const Add = () => {
   }
 
   return <div>
-    <div>
-      Title
-      <input onChange={(e) => setTitle(e.target.value)}/>
+    <div className={s.flex}>
+      <div className={s.series_item_labels}>
+        <div>Title</div>
+        <div>Premiere</div>
+        <div>Rating</div>
+        <div>Trailer</div>
+        <div>Cover</div>
+        <div>Seasons</div>
+      </div>
+      <div className={s.series_item_info}>
+        <div>
+          <input onChange={(e) => setTitle(e.target.value)}/>
+        </div>
+        <div style={{marginTop: ".7rem"}}>
+          <input onChange={(e) => setPremiere(e.target.value)}/>
+        </div>
+        <div style={{marginTop: ".7rem"}}>
+          <input onChange={(e) => setRating(e.target.value)}/>
+        </div>
+        <div style={{marginTop: ".7rem"}}>
+          <input onChange={(e) => setTrailer(e.target.value)}/>
+        </div>
+        <div style={{marginTop: ".7rem"}}>
+          <input onChange={(e) => setCover(e.target.value)}/>
+        </div>
+        <div style={{marginTop: ".7rem"}}>
+          <input onChange={(e) => setSeasons(e.target.value)}/>
+        </div>
+      </div>
     </div>
     <div>
-      Premiere
-      <input onChange={(e) => setPremiere(e.target.value)}/>
-    </div>
-    <div>
-      Rating
-      <input onChange={(e) => setRating(e.target.value)}/>
-    </div>
-    <div>
-      Trailer
-      <input onChange={(e) => setTrailer(e.target.value)}/>
-    </div>
-    <div>
-      Cover
-      <input onChange={(e) => setCover(e.target.value)}/>
-    </div>
-    <div>
-      Seasons
-      <input onChange={(e) => setSeasons(e.target.value)}/>
-    </div>
-    <div>
-      <button onClick={()=>{
-        addToDb()}}>Добавить</button>
+      <button onClick={() => {addToDb()}}
+              style={{marginTop: "2rem"}}
+              className={s.btn_second}>Add
+      </button>
     </div>
   </div>
 };

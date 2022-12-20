@@ -27,37 +27,29 @@ const Find = () => {
 
 
   return <div>
-    <div>
-      Введите название сериала:
-      <input onChange={(e) => setName(e.target.value)}/>
-      <button onClick={() => {
-        getSer('1')
-      }}>Найти
+    <div style={{marginBottom: "2rem"}}>
+      Input series name
+      <input style={{marginLeft: "1rem"}} onChange={(e) => setName(e.target.value)}/>
+      <button style={{marginLeft: "1rem"}} className={s.btn_second} onClick={() => {getSer('1')}}>Find
       </button>
     </div>
-    <div>
-      Title
-      <label> {Data.title}</label>
-    </div>
-    <div>
-      Premiere
-      <label> {Data.premiere}</label>
-    </div>
-    <div>
-      Rating
-      <label> {Data.rating}</label>
-    </div>
-    <div>
-      Trailer
-      <label> {Data.trailer}</label>
-    </div>
-    <div>
-      Cover
-      <label> {Data.cover}</label>
-    </div>
-    <div>
-      Seasons
-      <label> {Data.seasons}</label>
+    <div className={s.flex}>
+      <div className={s.series_item_labels}>
+        <div>Title</div>
+        <div>Premiere</div>
+        <div>Rating</div>
+        <div>Trailer</div>
+        <div>Cover</div>
+        <div>Seasons</div>
+      </div>
+      <div className={s.series_item_info}>
+        <h1>{Data.title}</h1>
+        <h2>{Data.premiere}</h2>
+        <h2>{Data.rating}</h2>
+        <h2>{Data.trailer}</h2>
+        <h2>{Data.cover}</h2>
+        <h2>{Data.seasons}</h2>
+      </div>
     </div>
   </div>
 };
