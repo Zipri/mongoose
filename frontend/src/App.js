@@ -7,6 +7,7 @@ import StartPage from "./components/StartPage";
 import PatientRegistration from "./components/PatientRegistration";
 import ManagingMedicalRecords from "./components/ManagingMedicalRecords";
 import Analyzes from "./components/Analyzes";
+import Images from "./components/Images";
 
 
 const App = () => {
@@ -17,7 +18,8 @@ const App = () => {
       <Route path={'/patient_registration'} element={<PatientRegistration/>}/>
       <Route path={'/managing_medical_records'} element={<ManagingMedicalRecords/>}/>
       <Route path={'/analyzes'} element={<Analyzes/>}/>
-      <Route path={'/images'} element={<Find/>}/>
+      <Route path={'/images'} element={<Images/>}/>
+      <Route path={'/info'} element={<Images/>}/>
       <Route path={'/authorization'} element={<Find/>}/>
     </Routes>
   </div>

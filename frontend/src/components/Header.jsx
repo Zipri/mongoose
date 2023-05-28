@@ -12,7 +12,7 @@ const Header = () => {
         </NavLink>
         <NavLink to={'/managing_medical_records'} className={({isActive}) =>
                      (isActive ? `${s.btn_home_active} ${s.btn_home}` : `${s.btn_main} ${s.btn_home}`)}>
-            Управление медицинскими записями
+            Медицинские записи
         </NavLink>
         <NavLink to={'/analyzes'} className={({isActive}) =>
                      (isActive ? `${s.btn_home_active} ${s.btn_home}` : `${s.btn_main} ${s.btn_home}`)}>
@@ -21,6 +21,10 @@ const Header = () => {
         <NavLink to={'/images'} className={({isActive}) =>
                      (isActive ? `${s.btn_home_active} ${s.btn_home}` : `${s.btn_main} ${s.btn_home}`)}>
             Изображения
+        </NavLink>
+        <NavLink to={'/info'} className={({isActive}) =>
+            (isActive ? `${s.btn_home_active} ${s.btn_home}` : `${s.btn_main} ${s.btn_home}`)}>
+            Информация
         </NavLink>
         <NavLink to={'/authorization'} className={({isActive}) =>
             (isActive ? `${s.btn_home_active} ${s.btn_home}` : `${s.btn_second} ${s.btn_home}`)}>
