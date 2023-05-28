@@ -43,8 +43,41 @@
     background-color: white;
 }
 
+.btn_home {
+    margin-right: 2rem;
+    text-decoration: none;
+}
+
+.btn_home_active {
+    color: dodgerblue;
+    background-color: white;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: .1rem solid dodgerblue;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.header_large {
+    font-size: 2rem;
+    word-break: break-word;
+}
+
+.header_medium {
+    font-size: 1.5rem;
+    word-break: break-word;
+}
+
 .flex {
     display: flex;
+}
+
+.flex_gap_medium {
+    gap: 1.5rem;
 }
 
 .flex_column {
@@ -52,6 +85,28 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.flex_center {
+    justify-content: center;
+}
+
+.flex_vertical_center {
+    align-items: center;
+}
+
+.input {
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    outline: none;
+    border: .1rem solid dodgerblue;
+}
+
+.input_label {
+    margin: .5rem 1rem;
+}
+
+
 
 .series_item {
     margin-top: 2rem;

@@ -1,19 +1,23 @@
 import React from 'react';
 import './App.css';
-import Series from "./components/Series";
-import Home from "./components/Home";
+import Header from "./components/Header";
 import {Routes, Route} from "react-router-dom";
 import Add from "./components/Add";
 import Find from "./components/find";
+import StartPage from "./components/StartPage";
+import PatientRegistration from "./components/PatientRegistration";
 
 
 const App = () => {
   return <div className="App">
-    <Home/>
+    <Header/>
     <Routes>
-      <Route path={'/all'} element={<Series/>}/>
-      <Route path={'/add'} element={<Add/>}/>
-      <Route path={'/find'} element={<Find/>}/>
+      <Route path={'/'} element={<StartPage/>}/>
+      <Route path={'/patient_registration'} element={<PatientRegistration/>}/>
+      <Route path={'/managing_medical_records'} element={<Add/>}/>
+      <Route path={'/analyzes'} element={<Find/>}/>
+      <Route path={'/images'} element={<Find/>}/>
+      <Route path={'/authorization'} element={<Find/>}/>
     </Routes>
   </div>
 }
