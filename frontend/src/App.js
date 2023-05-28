@@ -6,6 +6,7 @@ import Add from "./components/Add";
 import Find from "./components/find";
 import StartPage from "./components/StartPage";
 import PatientRegistration from "./components/PatientRegistration";
+import ManagingMedicalRecords from "./components/ManagingMedicalRecords";
 
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
     <Routes>
       <Route path={'/'} element={<StartPage/>}/>
       <Route path={'/patient_registration'} element={<PatientRegistration/>}/>
-      <Route path={'/managing_medical_records'} element={<Add/>}/>
+      <Route path={'/managing_medical_records'} element={<ManagingMedicalRecords/>}/>
       <Route path={'/analyzes'} element={<Find/>}/>
       <Route path={'/images'} element={<Find/>}/>
       <Route path={'/authorization'} element={<Find/>}/>
